@@ -4,10 +4,13 @@ import '../../core/colors/colors.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
-    super.key, required this.icon, required this.text,
+    super.key, required this.icon, required this.text, required this.size, required this.textSize,
   });
  final IconData icon;
  final String text;
+ final double size;
+ final double textSize;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -15,12 +18,12 @@ class CustomButton extends StatelessWidget {
         Icon(
           icon,
           color: kwhite,
-          size: 30,
+          size: size,
         ),
         Text(
           text,
           style: TextStyle(
-            fontSize: 17,
+            fontSize: textSize,
           ),
         )
       ],
